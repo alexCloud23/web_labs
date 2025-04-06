@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос выставки смартфонов</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <h1>Выставка смартфонов 2025</h1>
+    </header>
+    
+    <div class="main-container">
+        <nav>
+            <h3>Меню</h3>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Результаты</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <article class="survey-block">
+            <form id="surveyForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" 
+                           id="name" 
+                           class="uniform-input" 
+                           required 
+                           pattern="[А-Яа-яЁё\s]+">
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" 
+                           id="email" 
+                           class="uniform-input" 
+                           required>
+                </div>
+        
+                <div class="form-group">
+                    <label>Лучший бренд:</label>
+                    <select id="brand" class="uniform-input" required>
+                        <option value="" disabled selected>Выберите бренд</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="xiaomi">Xiaomi</option>
+                    </select>
+                </div>
+        
+                <div class="form-group">
+                    <label>Неделя посещения посещения:</label>
+                    <input type="week" 
+                           id="visitWeek" 
+                           class="uniform-input" 
+                           required>
+                </div>
+        
+                <div class="form-group">
+                    <label>Оценка: <output id="rangeValue">5</output>/10</label>
+                    <input type="range" 
+                           id="rating" 
+                           class="uniform-input" 
+                           min="1" 
+                           max="10" 
+                           value="5" 
+                           oninput="document.getElementById('rangeValue').value = this.value">
+                </div>
+        
+                <div class="form-group">
+                    <label>Цвет стенда:</label>
+                    <input type="color" 
+                           id="standColor" 
+                           class="uniform-input" 
+                           value="#ff0000">
+                </div>
+        
+        
+                <div class="form-group">
+                    <label>Что понравилось:</label>
+                    <div class="checkbox-row">
+                        <label><input type="checkbox" name="features" value="design"> Дизайн</label>
+                        <label><input type="checkbox" name="features" value="performance"> Производительность</label>
+                    </div>
+                </div>
+        
+                <div class="buttons">
+                    <button type="reset">Очистить</button>
+                    <button type="submit">Отправить</button>
+                    <button type="button" onclick="showResults()">Результаты</button>
+                </div>
+            </form>
+        </article>
+
+        <aside>
+            <h3>Новости</h3>
+            <p>Новые модели смартфонов 2025!</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>© Выставка смартфонов 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
