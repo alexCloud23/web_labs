@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор динамических форм</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header id="main-header">📋 Конструктор данных</header>
+    
+    <div id="main-container">
+        <nav id="nav">
+            <h2>Быстрый доступ</h2>
+            <ul>
+                <li><a href="#form">Главная форма</a></li>
+                <li><a href="#templates">Шаблоны</a></li>
+                <li><a href="#settings">Настройки</a></li>
+            </ul>
+        </nav>
+
+        <section id="main-section">
+            <h2>🔧 Редактор полей</h2>
+            <article>
+                <div class="form-container">
+                    <h1>Форма ввода данных</h1>
+                    
+                    <div class="input-group">
+                        <label>Поле 1:</label>
+                        <input type="text" class="form-input" placeholder="Введите данные">
+                    </div>
+                    <div class="input-group">
+                        <label>Поле 2:</label>
+                        <input type="text" class="form-input" placeholder="Введите данные">
+                    </div>
+                    <div class="input-group">
+                        <label>Поле 3:</label>
+                        <input type="text" class="form-input" placeholder="Введите данные">
+                    </div>
+
+                    <div class="settings-group">
+                        <div class="setting">
+                            <label>Размер шрифта:</label>
+                            <select id="fontSize" class="form-select">
+                                <option value="12px">12px</option>
+                                <option value="14px">14px</option>
+                                <option value="16px" selected>16px</option>
+                                <option value="18px">18px</option>
+                            </select>
+                        </div>
+                        <div class="setting">
+                            <label>Цвет текста:</label>
+                            <select id="textColor" class="form-select">
+                                <option value="black" selected>Черный</option>
+                                <option value="red">Красный</option>
+                                <option value="blue">Синий</option>
+                                <option value="green">Зеленый</option>
+                                <option value="aqua">Аква</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button id="clearBtn" class="form-btn">Очистить</button>
+                        <button id="showBtn" class="form-btn">Показать</button>
+                        <button id="addBtn" class="form-btn">Добавить поле</button>
+                    </div>
+                </div>
+            </article>
+            <footer class="section-footer">Ваша форма готова к использованию!</footer>
+        </section>
+
+        <aside id="aside">
+            <h2>📌 Инструкция</h2>
+            <div class="tip">
+                <p>1. Нажмите "Добавить поле" чтобы добавить поле</p>
+                <p>2. Используйте Enter для перехода</p>
+                <p>3. Выберите стиль отображения</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer id="main-footer">
+        <p>© 2025 Генератор форм | Контакты: forms@data.com</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Введенные данные</h2>
+            <ol id="data-list"></ol>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
