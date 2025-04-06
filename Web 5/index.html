@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Школьный класс - Управление</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Управление школьными классами</h1>
+        
+        <div class="form-section">
+            <form id="classForm">
+                <input type="number" id="classNumber" placeholder="№ класса" required>
+                <input type="number" id="studentsCount" placeholder="Количество учащихся" required>
+                <input type="tel" id="phone" placeholder="Телефон" required>
+                <input type="text" id="teacherName" placeholder="ФИО классного руководителя" required>
+                
+                <select id="idSelector"></select>
+                
+                <div class="button-group">
+                    <button type="button" onclick="SchoolClass.addRecord()">Добавить запись</button>
+                    <button type="button" onclick="SchoolClass.clearForm()">Очистить форму</button>
+                    <button type="button" onclick="SchoolClass.deleteRecord()">Удалить по ID</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="property-management">
+            <div class="add-property">
+                <input type="text" id="newPropertyName" placeholder="Название свойства">
+                <button onclick="SchoolClass.addNewProperty()">Добавить свойство</button>
+            </div>
+            <div class="remove-property">
+                <select id="propertySelector"></select>
+                <button onclick="SchoolClass.removeProperty()">Удалить свойство</button>
+            </div>
+            <div id="propertyError" class="error-message"></div>
+        </div>
+
+        <button onclick="SchoolClass.showExtremeTeachers()">Показать руководителей класса, c мин/макс количеством учащихся</button>
+        
+        <div class="table-container">
+            <table id="classTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>№ класса</th>
+                        <th>Учащиеся</th>
+                        <th>Телефон</th>
+                        <th>Классный руководитель</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
