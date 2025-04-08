@@ -1,6 +1,7 @@
 const SchoolClass = {
     data: JSON.parse(localStorage.getItem('classData')) || [],
-    properties: ['address', 'rating', 'experience'],
+    history: JSON.parse(localStorage.getItem('classHistory')) || [],
+    properties: ['адресс', 'рейтинг', 'опыт'],
 
     saveData() {
         localStorage.setItem('classData', JSON.stringify(this.data));
@@ -28,6 +29,7 @@ const SchoolClass = {
         this.saveData();
         propInput.value = "";
         errorDiv.textContent = "";
+        this.addHistoryEntry('property_add', null, propName);
     },
 
     addRecord() {
@@ -41,12 +43,14 @@ const SchoolClass = {
         };
         this.data.push(newRecord);
         this.saveData();
+        this.addHistoryEntry('add', newRecord.id);
     },
 
     deleteRecord() {
         const id = +document.getElementById('idSelector').value;
         this.data = this.data.filter(record => record.id !== id);
         this.saveData();
+        this.addHistoryEntry('delete', id);
     },
 
     updateUI() {
@@ -136,7 +140,38 @@ const SchoolClass = {
         this.saveData();
         this.updateUI();
         errorDiv.textContent = "";
+        this.addHistoryEntry('property_remove', null, prop);
     },
+
+    addHistoryEntry(action, recordId, details = '') {
+        const entry = `${this.formatHistoryEntry(action, recordId, details)}`;
+        this.history.unshift(entry);
+        localStorage.setItem('classHistory', JSON.stringify(this.history));
+        this.updateHistoryUI();
+    },
+
+    updateHistoryUI() {
+        const logContainer = document.getElementById('historyLog');
+        logContainer.innerHTML = this.history.map(entry => `
+            <div class="history-entry">${entry}</div>
+        `).join('');
+    },
+
+    formatHistoryEntry(action, recordId, details) {
+        switch(action) {
+            case 'add': return `Добавлена запись с ID ${recordId}`;
+            case 'delete': return `Удалена запись с ID ${recordId}`;
+            case 'property_add': return `Добавлено свойство: "${details}"`;
+            case 'property_remove': return `Удалено свойство: "${details}"`;
+            default: return `Изменение: ${details}`;
+        }
+    },
+
+    init() {
+        this.updateUI();
+        this.updateHistoryUI();
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => SchoolClass.updateUI());
+document.addEventListener('DOMContentLoaded', () => SchoolClass.init());

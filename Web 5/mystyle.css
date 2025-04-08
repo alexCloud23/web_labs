@@ -92,3 +92,36 @@ th {
     width: 200px;
     margin-right: 10px;
 }
+
+.history-change {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.history-log {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.history-entry {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95em;
+}
+
+.history-entry:last-child {
+    border-bottom: none;
+}
+
+.history-time {
+    color: #888;
+    font-size: 0.8em;
+    margin-right: 10px;
+}
