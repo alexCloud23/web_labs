@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundStore — Магазин музыкальных инструментов</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <div class="container">
+    <h1 class="big-title">SoundStore</h1>
+    <p class="subtitle">Магазин музыкальных инструментов нового поколения</p>
+    <div class="form-block">
+      <label for="instruments">Введите список инструментов (по одному на строку):</label>
+      <textarea id="instruments" placeholder="Например:\nГитара\nбарабан\nСкрипка\nфлейта\nпианино"></textarea>
+      <button id="process">Обработать</button>
+      <div id="original-result"></div>
+      <button id="show-corrected">Показать исправленный массив</button>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <span>© 2025 SoundStore | Все права защищены</span>
+      <span>Контакты: info@soundstore.ru</span>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html> 
