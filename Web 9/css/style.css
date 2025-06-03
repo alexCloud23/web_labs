@@ -1,0 +1,67 @@
+body {
+  background: #fff7e6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 540px;
+  margin: 48px auto;
+  background: #fff3e0;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(255, 87, 34, 0.10);
+  padding: 40px 32px 32px 32px;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 32px;
+  color: #c62828;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 36px;
+}
+li {
+  background: #ffe0b2;
+  margin-bottom: 12px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  color: #bf360c;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(255, 87, 34, 0.04);
+}
+li:hover {
+  background: #ffd54f;
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.10);
+}
+button.gradient-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #ff5252 0%, #ff9800 60%, #fff176 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  cursor: pointer;
+  transition: box-shadow 0.2s, filter 0.2s;
+  box-shadow: 0 2px 8px rgba(255, 87, 34, 0.08);
+  filter: brightness(0.98);
+}
+button.gradient-btn:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 16px rgba(255, 87, 34, 0.12);
+}
+li.placeholder {
+  background: transparent;
+  color: #bbb;
+  text-align: center;
+  box-shadow: none;
+  font-style: italic;
+} 
