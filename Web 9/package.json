@@ -1,0 +1,12 @@
+{
+  "name": "web9-project",
+  "version": "1.0.0",
+  "description": "Клиент-серверный проект (Node.js, DHTML, стили)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+} 
