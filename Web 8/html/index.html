@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Слайдер рекламы компании</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <h1>SPACE ADVERTISING</h1>
+    <p class="subtitle">Будущее рекламы — в космосе!</p>
+  </header>
+  <main>
+    <div class="slider-container">
+      <div id="slider">
+        <img id="slide-image" src="" alt="Рекламное изображение" />
+      </div>
+      <div class="controls">
+        <button id="start-btn">Старт/Возобновить</button>
+        <button id="stop-btn">Стоп</button>
+        <label>Интервал (сек): <input type="number" id="interval-input" min="1" value="2"></label>
+        <label>Кол-во картинок: <input type="number" id="count-input" min="1" value="3"></label>
+      </div>
+    </div>
+    <div id="end-message" class="hidden">Показ завершён!</div>
+  </main>
+  <footer class="main-footer">
+    <p>© 2024 Space Advertising. Связаться: <a href="mailto:info@spacead.com">info@spacead.com</a></p>
+    <p>Следите за нашими космическими проектами!</p>
+  </footer>
+  <script src="../js/script.js"></script>
+</body>
+</html> 
