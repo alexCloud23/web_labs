@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Notion Modal — Заметки и идеи</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Notion Modal</div>
+    <div class="desc">Ваши заметки, идеи и задачи — в модальных окнах</div>
+  </header>
+  <main>
+    <section class="modal-controls">
+      <label>Тип:
+        <select id="type-select"></select>
+      </label>
+      <label>Размер:
+        <select id="size-select"></select>
+      </label>
+      <label>Позиция:
+        <select id="position-select"></select>
+      </label>
+      <label>Цвет:
+        <select id="color-select"></select>
+      </label>
+      <label>Иконка:
+        <select id="icon-select"></select>
+      </label>
+    </section>
+    <section class="modal-buttons-section">
+      <button class="primary-btn" id="open-modal-0">Окно 1</button>
+      <button class="primary-btn" id="open-modal-1">Окно 2</button>
+      <button class="primary-btn" id="open-modal-2">Окно 3</button>
+      <button class="primary-btn" id="open-modal-3">Окно 4</button>
+      <button class="primary-btn" id="open-modal-4">Окно 5</button>
+      <button class="primary-btn" id="open-modal-5">Окно 6</button>
+    </section>
+    <div id="modals-container"></div>
+  </main>
+  <footer>
+    <span>© 2025 Notion Modal. Ваши идеи всегда под рукой.</span>
+  </footer>
+  <script type="module" src="../js/script.js"></script>
+</body>
+</html>
